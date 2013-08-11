@@ -30,7 +30,7 @@ def nginx_update():
     sudo('service nginx restart')
 
 def collectstatic():
-    run('env/bin/python pycarolinas_org/manage.py collectstatic --noinput --settings=pycarolinas_org.settings.local')
+    run('env/bin/python pycarolinas_org/manage.py collectstatic -l --noinput --settings=pycarolinas_org.settings.local')
 
 def stop_django():
     run('kill `cat /home/pycar/django-fcgi.pid`')
