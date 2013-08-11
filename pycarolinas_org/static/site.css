@@ -3,7 +3,13 @@ body {
     color: #333;
 }
 
+    a {
+        color: #5AE86F;
+    }
+
 .navbar-inner {
     background: black;
-    color: #eee;
 }
+    .navbar .brand {
+        color: #eee;
+    }

@@ -23,6 +23,7 @@ def deploy(delete=True):
     local('git push')
     with cd(env.project_dir):
         run('git pull origin master')
+    collectstatic()
     restart_django()
 
 def nginx_update():
