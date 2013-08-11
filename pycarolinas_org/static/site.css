@@ -11,5 +11,12 @@ body {
     background: black;
 }
     .navbar .brand {
-        color: #eee;
+        color: #E4E85A;
     }
+    .navbar .nav > li > a {
+        color: #E4E85A;
+    }
+
+h1,h2,h3,h4 { 
+    color: #E4E85A;
+}
