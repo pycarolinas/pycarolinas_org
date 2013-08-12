@@ -19,10 +19,12 @@ env.project_dir = '/home/pycar/pycarolinas_org'
 def clean():
     local('find . -name "*.swp" -delete')
 
+def build():
+    local('lessc pycarolinas_org/static/site.less pycarolinas_org/static/site.css')
+
 def deploy(delete=True):
-    local('git push')
-    with cd(env.project_dir):
-        run('git pull origin master')
+    build()
+    rsync_project(local_dir='pycarolinas_org', remote_dir='/home/pycar/pycarolinas_org/')
     collectstatic()
     restart_django()
 
